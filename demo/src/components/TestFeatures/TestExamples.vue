@@ -9,7 +9,6 @@
     <v-container fluid class="fill-height">
       <v-row>
         <example2 :loading="loading" :determinate="determinate" :no-data="noData" :test="true" />
-        <example2 :loading="loading" :determinate="determinate" :no-data="noData" :test="true" />
         <example3 :loading="loading" :determinate="determinate" :no-data="noData" :test="true" />
         <example6 :loading="loading" :determinate="determinate" :no-data="noData" :test="true" />
         <example16 :loading="loading" :determinate="determinate" :no-data="noData" :test="true" />
