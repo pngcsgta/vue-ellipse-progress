@@ -6,7 +6,7 @@
       :is="component"
       :progress="progress"
       :determinate="determinate"
-      :angle="90"
+      :angle="-90"
       color="#7579ff"
       empty-color="#324c7e"
       :size="180"
@@ -16,6 +16,7 @@
       lineMode="out 5"
       animation="rs 700 1000"
       fontSize="1.5rem"
+      reverse
       half
       :dot="{
         size: 5,

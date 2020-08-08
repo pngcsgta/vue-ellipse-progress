@@ -17,6 +17,7 @@
       dot="7"
       :loading="loading"
       :no-data="noData"
+      reverse
     >
       <span slot="legend-caption"> PROGRESS </span>
     </component>
