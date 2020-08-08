@@ -4,12 +4,6 @@
   >
     <component
       :is="component"
-      :dot="{
-        size: 46,
-        backgroundColor: 'white',
-        width: '2px',
-      }"
-      id="timer-example"
       :progress="progress"
       :determinate="determinate"
       line="butt"
@@ -19,21 +13,15 @@
       thickness="46"
       emptyThickness="8"
       :size="180"
-      dash="strict 60 0.8"
+      dash="strict 4 0.98"
       lineMode="in -8"
-      :legend="false"
       legendClass="legend-custom-style"
       fontSize="1.5rem"
       font-color="white"
-      animation="loop 1000 100"
+      animation="loop 500 100"
       :loading="loading"
       :no-data="noData"
     >
-      <span slot="legend-caption">
-        <span>{{ minPrefix }}{{ min }}</span>
-        <span class="mx-2">:</span>
-        <span>{{ secPrefix }}{{ sec }}</span>
-      </span>
     </component>
   </example-card>
 </template>
@@ -42,9 +30,10 @@
 import ExampleCard from "@/components/Examples/ExampleCard";
 import Interval from "@/utils/interval";
 import props from "@/components/Examples/examplesProps";
+import randomNumberInRange from "@/utils/randomNumberInRange";
 
 export default {
-  name: "Example13",
+  name: "Example16",
   components: { ExampleCard },
   props,
   data: () => ({
@@ -134,33 +123,17 @@ export default {
     },
   }),
   computed: {
-    tasksDonePercent() {
-      return (this.tasksDone * 100) / 200;
-    },
-    minPrefix() {
-      return this.min < 10 ? "0" : "";
-    },
-    secPrefix() {
-      return this.sec < 10 ? "0" : "";
-    },
     component() {
       return this.test ? "vue-ellipse-progress-test" : "vue-ellipse-progress";
     },
   },
   methods: {
-    runTimer() {
-      if (this.sec === 60) {
-        this.sec = 0;
-        this.min++;
-        this.progress = (this.sec * 100) / 60;
-        return;
-      }
-      this.sec++;
-      this.progress = (this.sec * 100) / 60;
+    randomizeProgress() {
+      this.progress = randomNumberInRange(-50, 50);
     },
   },
   mounted() {
-    Interval.addTask(this.runTimer);
+    Interval.addTask(this.randomizeProgress, 500);
   },
 };
 </script>

@@ -134,9 +134,6 @@ export default {
     },
   }),
   computed: {
-    tasksDonePercent() {
-      return (this.tasksDone * 100) / 200;
-    },
     minPrefix() {
       return this.min < 10 ? "0" : "";
     },
