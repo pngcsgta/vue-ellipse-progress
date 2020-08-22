@@ -153,6 +153,7 @@ export default {
   }),
   computed: {
     calculatedProgress() {
+      if (this.teamStats.playedGames < 1) return 0;
       return !this.teamStats ? 0 : (this.teamStats.won * 100) / this.teamStats.playedGames;
     },
   },

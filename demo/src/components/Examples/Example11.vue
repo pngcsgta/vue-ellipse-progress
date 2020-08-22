@@ -33,21 +33,18 @@ export default {
       },
       {
         progress: randomNumberInRange(0, 20),
-        reverse: true,
       },
       {
         progress: randomNumberInRange(0, 20),
       },
       {
         progress: randomNumberInRange(0, 20),
-        reverse: true,
       },
       {
         progress: randomNumberInRange(0, 20),
       },
       {
         progress: randomNumberInRange(0, 20),
-        reverse: true,
       },
     ],
     colors: ["rgb(117,121,255)", "rgb(147, 112, 219)", "rgb(104,54,243)", "rgb(106, 90, 205)"],
