@@ -31,7 +31,7 @@
                 </v-col>
                 <v-col>
                   <btn block :buttonIcon="{ name: 'mdi-tune' }" disabled>
-                    build your own circle
+                    build your circle
                   </btn>
                 </v-col>
               </v-row>
