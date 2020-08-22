@@ -40,6 +40,8 @@
         <example14 :loading="loading" :determinate="determinate" :no-data="noData" />
 
         <example15 :loading="loading" :determinate="determinate" :no-data="noData" />
+
+        <example16 :loading="loading" :determinate="determinate" :no-data="noData" />
       </v-row>
     </v-container>
   </section>
@@ -55,16 +57,19 @@ import Example6 from "@/components/Examples/Example6";
 import Example7 from "@/components/Examples/Example7";
 import Example8 from "@/components/Examples/Example8";
 import Example9 from "@/components/Examples/Example9";
-import ExamplesControls from "@/components/Examples/ExamplesControls";
 import Example10 from "@/components/Examples/Example10";
 import Example11 from "@/components/Examples/Example11";
 import Example12 from "@/components/Examples/Example12";
 import Example13 from "@/components/Examples/Example13";
 import Example14 from "@/components/Examples/Example14";
 import Example15 from "@/components/Examples/Example15";
+import Example16 from "@/components/Examples/Example16";
+import ExamplesControls from "@/components/Examples/ExamplesControls";
+
 export default {
   name: "Examples",
   components: {
+    Example16,
     Example15,
     Example14,
     Example13,
@@ -114,7 +119,7 @@ export default {
 
 @media only screen and (max-width: 1263px) {
   #examples {
-    padding: 100px 0px;
+    padding: 100px 0;
   }
 }
 </style>

@@ -19,7 +19,7 @@
       :no-data="noData"
       reverse
     >
-      <span slot="legend-caption"> PROGRESS </span>
+      <span slot="legend-caption"> REVERSE </span>
     </component>
   </example-card>
 </template>
