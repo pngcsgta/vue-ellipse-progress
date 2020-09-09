@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
-    "install-beta": "npm install vue-ellipse-progress-test@npm:vue-ellipse-progress@1.2.0-beta.0"
+    "install-beta": "npm install vue-ellipse-progress-test@npm:vue-ellipse-progress@1.3.0-beta.4"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -14,7 +14,7 @@
     "v-clipboard": "^2.2.3",
     "vue": "^2.6.11",
     "vue-ellipse-progress": "^1.2.0",
-    "vue-ellipse-progress-test": "npm:vue-ellipse-progress@^1.2.0-beta.0",
+    "vue-ellipse-progress-test": "npm:vue-ellipse-progress@^1.3.0-beta.4",
     "vue-router": "^3.3.4",
     "vuetify": "^2.3.4",
     "vuex": "^3.5.1"

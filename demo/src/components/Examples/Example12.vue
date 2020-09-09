@@ -1,6 +1,6 @@
 <template>
   <example-card
-    link="https://github.com/setaman/vue-ellipse-progress/blob/demo/demo/src/components/Examples/Example11.vue"
+    link="https://github.com/setaman/vue-ellipse-progress/blob/demo/demo/src/components/Examples/Example12.vue"
   >
     <component
       :is="component"

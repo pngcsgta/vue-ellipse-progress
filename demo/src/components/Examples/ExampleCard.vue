@@ -22,4 +22,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss">
+.example-card-circle {
+  .ep-legend--value {
+    font-family: monospace;
+  }
+}
+</style>
