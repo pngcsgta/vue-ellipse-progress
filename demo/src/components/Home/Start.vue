@@ -24,26 +24,21 @@
                     href="https://github.com/setaman/vue-ellipse-progress"
                     block
                     size="medium"
-                    :buttonIcon="{ name: 'mdi-github-circle' }"
+                    :buttonIcon="{ name: 'mdi-github' }"
                   >
                     See docs on github
                   </btn>
                 </v-col>
-                <v-col>
+                <!--<v-col>
                   <btn block :buttonIcon="{ name: 'mdi-tune' }" disabled>
                     build your circle
                   </btn>
-                </v-col>
+                </v-col>-->
               </v-row>
             </v-col>
           </v-row>
-          <div class="scroll-downs">
-            <div class="mousey">
-              <div class="scroller"></div>
-            </div>
-          </div>
         </v-col>
-        <v-col sm="12" md="7" style="position: relative;" class="d-flex align-center">
+        <v-col sm="12" md="7" style="position: relative" class="d-flex align-center">
           <div id="overlay"></div>
           <div class="text-center fill-width">
             <vue-ellipse-progress
@@ -65,7 +60,7 @@
                 <span class="mx-2">/</span>
                 <span>{{ teamStats ? teamStats.playedGames : "" }}</span>
               </span>
-              <div slot="legend-caption" style="color: #7579ff;">
+              <div slot="legend-caption" style="color: #7579ff">
                 <div v-if="teamStats"><b>WON</b> VS <b>PLAYED</b></div>
                 <span>{{ teamStats ? teamStats.team.name : "" }}</span>
               </div>
@@ -85,9 +80,7 @@
                     ></v-autocomplete>
                   </div>
                   <div>
-                    <btn block large :loading="loading" type="submit">
-                      load data
-                    </btn>
+                    <btn block large :loading="loading" type="submit"> load data </btn>
                   </div>
                 </form>
               </v-col>
@@ -95,9 +88,12 @@
           </div>
         </v-col>
       </v-row>
-      <v-snackbar v-model="snackbar" color="info">
-        Command copied
-      </v-snackbar>
+      <v-snackbar v-model="snackbar" color="info"> Command copied </v-snackbar>
+      <div class="scroll-downs">
+        <div class="mousey">
+          <div class="scroller"></div>
+        </div>
+      </div>
     </section>
   </v-container>
 </template>
@@ -187,6 +183,7 @@ export default {
 <style scoped lang="scss">
 #start {
   min-height: 100vh;
+  position: relative;
   h1 {
     color: white;
     font-weight: normal;
@@ -211,10 +208,12 @@ export default {
 
 .scroll-downs {
   position: absolute;
-  right: -25%;
+  z-index: 10;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 31px;
   bottom: 40px;
-  width: 20px;
-  height: 55px;
 }
 .mousey {
   width: 3px;

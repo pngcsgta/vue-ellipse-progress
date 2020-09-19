@@ -42,6 +42,8 @@
         <example15 :loading="loading" :determinate="determinate" :no-data="noData" />
 
         <example16 :loading="loading" :determinate="determinate" :no-data="noData" />
+
+        <example17 :loading="loading" :determinate="determinate" :no-data="noData" />
       </v-row>
     </v-container>
   </section>
@@ -65,10 +67,12 @@ import Example14 from "@/components/Examples/Example14";
 import Example15 from "@/components/Examples/Example15";
 import Example16 from "@/components/Examples/Example16";
 import ExamplesControls from "@/components/Examples/ExamplesControls";
+import Example17 from "@/components/Examples/Example17";
 
 export default {
   name: "Examples",
   components: {
+    Example17,
     Example16,
     Example15,
     Example14,
