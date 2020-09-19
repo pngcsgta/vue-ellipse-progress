@@ -2,15 +2,11 @@
   <div id="app">
     <div class="ep-test-card" :style="{ maxHeight: size.height + 2000 + 'px' }">
       <div>
-        <label for="progress">
-          Progress
-        </label>
+        <label for="progress"> Progress </label>
         <input v-model="progress" max="100" min="-100" type="number" id="progress" />
         <button @click="updateProgress">Update</button>
         <button @click="updateTasksDone">Update Tasks</button>
-        <label for="size">
-          Size
-        </label>
+        <label for="size"> Size </label>
         <input v-model="size" type="number" id="size" />
         <label for="load">
           LOADING
@@ -30,7 +26,8 @@
         </label>
         <label for="determinate">
           Determinate
-          <input id="determinate" type="checkbox" v-model="circles[0].determinate" />
+          <input id="determinate" type="checkbox" v-model="determinate" />
+          <input id="determinate1" type="checkbox" v-model="circles[0].determinate" />
           <input id="determinate2" type="checkbox" v-model="determinate" />
         </label>
       </div>
@@ -40,13 +37,18 @@
         <input type="checkbox" v-model="circles[2].loading" />
         <input type="checkbox" v-model="circles[3].loading" />
       </div>-->
-      <div style="border: 1px solid red; display: inline-block;">
+      <div style="border: 1px solid red; display: inline-block">
         <vue-ellipse-progress
-          :size="600"
+          :size="200"
           :progress="progress"
           :legendValue="1315.56"
-          animation="rs 5000 500"
+          animation="rs 2000 500"
           :loading="loading"
+          dot="30 red"
+          :reverse="true"
+          line-mode="out 10"
+          :no-data="noData"
+          :determinate="determinate"
         >
           <template v-slot:default="{ counterTick }">
             <span
@@ -59,7 +61,17 @@
           </template>
         </vue-ellipse-progress>
       </div>
-      <vue-ellipse-progress :size="600" :progress="progress" :legend-value="125.1">
+      <vue-ellipse-progress
+        dot="20 green"
+        :loading="loading"
+        :size="200"
+        :progress="progress"
+        :legend-value="125.1"
+        half
+        line-mode="out 20"
+        :no-data="noData"
+        :determinate="determinate"
+      >
         <template v-slot:legend-caption>
           <p slot="legend-caption">TASKS DONE</p>
         </template>
@@ -77,9 +89,9 @@ export default {
     line: "round",
     price: "",
     circles: [
-      { progress: 50, color: "red" },
-      { progress: 50, color: "red", half: true, angle: -90 },
-      { progress: -50, color: "blue", reverse: false },
+      { progress: 50, color: "red", dot: "20 yellow" },
+      { progress: 50, color: "red", half: true, angle: -90, dot: "10 green" },
+      { progress: 50, color: "blue", reverse: false },
     ],
     determinate: false,
     loading: false,

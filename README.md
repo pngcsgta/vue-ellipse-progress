@@ -124,7 +124,7 @@ This table below provides a quick overview over all available options. To gain m
 | **[`dash`](#dash)** | String | "[strict] count spacing" |  |
 | **[`half`](#half)** | Boolean |  | false |
 | **[`gap`](#gap)** | Number | any Number that defines the gap between multiple circles in pixel | 0 |
-| **[`dot`](#dot)** [![npm](https://img.shields.io/badge/v1.1.0-blue?style=flat-square)](#dot) | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"10% red"` or object `{size : 10, backgroundColor: "red", widht: "2px", borderRadius: "5px" ...}`  | 0 |
+| **[`dot`](#dot)** | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"10% red"` or object `{size : 10, backgroundColor: "red", widht: "2px", borderRadius: "5px" ...}`  | 0 |
 | **[`reverse`](#reverse)** [![npm](https://img.shields.io/badge/v1.2.0-blue?style=flat-square)](#reverse) | Boolean | | false |
 | **[`data`](#data)** | Array | defines multiple circles, takes as values Objects with almost all props defined above | |
 
@@ -490,8 +490,6 @@ Defines the gap in pixels from one circle to the previous circle. It will be app
 
 - ### `dot`
 
-[![npm](https://img.shields.io/badge/v1.1.0-blue?style=flat-square)](#dot) 
-
 ###### Animated: :heavy_check_mark:
 
 The dot property lets you define a point indicator at the end of the progress line. You have a lot of freedom to customize the dot using a Number, descriptive String, or an Object to inject any CSS styles.   
@@ -569,7 +567,7 @@ data: [
 
 - #### `default`
 
-Use this slot, if you want to customize the presentation of the circle legend ad make a use of the animated counter, 
+Use this slot, if you want to customize the presentation of the circle legend and make a use of the animated counter, 
 so your formatting still animated. This works similar to the [`legendFormatter`](#legendformatter) and is just 
 an alternative way to provide a custom format. You can access animated counter properties through the scoped slot 
 props and adjust the presentation of the legend to your needs. 
