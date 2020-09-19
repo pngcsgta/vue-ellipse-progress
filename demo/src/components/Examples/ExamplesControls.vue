@@ -1,23 +1,17 @@
 <template>
   <v-row>
-    <v-col style="min-height: 100px;">
+    <v-col style="min-height: 100px">
       <div id="examples-controls-container" class="text-center mb-10" :class="{ fixed: fixed }">
         <div id="examples-controls">
           <div>
             <v-btn v-if="!isRunning" icon color="primary" @click="run">
-              <v-icon>
-                mdi-play
-              </v-icon>
+              <v-icon> mdi-play </v-icon>
             </v-btn>
             <v-btn v-else icon color="error" @click="stop">
-              <v-icon>
-                mdi-stop
-              </v-icon>
+              <v-icon> mdi-stop </v-icon>
             </v-btn>
             <v-btn :disabled="isRunning" icon color="info" @click="refresh">
-              <v-icon>
-                mdi-refresh
-              </v-icon>
+              <v-icon> mdi-refresh </v-icon>
             </v-btn>
           </div>
           <v-switch

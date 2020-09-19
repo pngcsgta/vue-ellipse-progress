@@ -21,12 +21,8 @@
       :no-data="noData"
     >
       <span slot="legend-value">
-        <span class="mr-1">
-          /
-        </span>
-        <span>
-          5
-        </span>
+        <span class="mr-1"> / </span>
+        <span> 5 </span>
       </span>
       <div slot="legend-caption">
         <p class="mb-0">24 REVIEWS</p>

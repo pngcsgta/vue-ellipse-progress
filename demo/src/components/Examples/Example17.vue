@@ -16,6 +16,7 @@
       :empty-thickness="3"
       :legend-value="price"
       animation="rs 3000"
+      :dot="`10 ${priceColor}`"
     >
       <template v-slot:default="{ counterTick: { currentValue } }">
         <div class="price" :style="{ color: determineColor(currentValue) }">
@@ -70,6 +71,7 @@ export default {
         if (progress > step) {
           index += 1;
         } else {
+          this.priceColor = this.colorSteps[index];
           return this.colorSteps[index];
         }
       }
@@ -88,7 +90,7 @@ export default {
 <style scoped lang="scss">
 .price {
   display: flex;
-  transition: 3s;
+  transition: 0.5s;
   font-size: 1.8rem;
   font-weight: bold;
   color: red;
