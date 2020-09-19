@@ -56,12 +56,16 @@
               font-size="2rem"
               font-color="#7579ff"
             >
-              <span slot="legend-value">
-                <span class="mx-2">/</span>
+              <template v-slot:default="{ counterTick }">
+                <span>
+                  <span class="mr-2" style="font-size: 0.9rem">WON</span>
+                  <b style="font-size: 3rem">{{ counterTick.currentValue }}</b>
+                  /
+                </span>
                 <span>{{ teamStats ? teamStats.playedGames : "" }}</span>
-              </span>
+                <span class="ml-1" style="font-size: 0.9rem">PLAYED</span>
+              </template>
               <div slot="legend-caption" style="color: #7579ff">
-                <div v-if="teamStats"><b>WON</b> VS <b>PLAYED</b></div>
                 <span>{{ teamStats ? teamStats.team.name : "" }}</span>
               </div>
             </vue-ellipse-progress>
