@@ -65,6 +65,17 @@
           </template>-->
         </ve-progress>
       </div>
+      <div>
+        <ve-progress
+          :gap="5"
+          :data="[
+            { progress: 50, hideLegend: hideLegend, loading: loading },
+            { progress: 60, hideLegend: false, loading: loading },
+            { progress: 70, gap: 30, hideLegend: false, loading: loading },
+          ]"
+        >
+        </ve-progress>
+      </div>
     </div>
   </div>
 </template>

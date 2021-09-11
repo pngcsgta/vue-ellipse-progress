@@ -57,7 +57,7 @@ export default {
       return Array.isArray(this.options.loader.color.colors);
     },
     uid() {
-      return this.$.uid;
+      return this.$?.uid ?? this._uid;
     },
   },
 };
